@@ -90,8 +90,8 @@ export default function Movies() {
   let [searchParams, setSearchParams] = useSearchParams();
   let submit = useSubmit();
   let movies = useLoaderData();
-  let totalFound = movies.totalCount;
-  let totalShow = movies.showCount;
+  //   let totalFound = movies.totalCount;
+  //   let totalShow = movies.showCount;
 
   return (
     <div>
@@ -103,17 +103,15 @@ export default function Movies() {
           name="searchTerm"
           placeholder="Search movies..."
         />
-        <p>
-          Showing {totalShow} of total {totalFound} movies found
-        </p>
+        <p>{/* Showing {totalShow} of total {totalFound} movies found */}</p>
       </Form>
-      <ul>
+      {/* <ul>
         {movies.documents.map((movie) => (
           <li key={movie.title}>
             <Link to={movie.title}>{movie.title}</Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
