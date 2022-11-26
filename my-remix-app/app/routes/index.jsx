@@ -15,7 +15,13 @@ export default function Index() {
             <Link to="/facets">Facet Search Demo</Link>
           </li>
           <li>
-            <a href="https://github.com/ch2isk4kos/remix-test-drive">GitHub</a>
+            <a
+              href="https://github.com/ch2isk4kos/remix-test-drive"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
           </li>
         </ul>
       </nav>
