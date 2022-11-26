@@ -15,9 +15,7 @@ export default function Index() {
             <Link to="/facets">Facet Search Demo</Link>
           </li>
           <li>
-            <a href="https://github.com/mongodb-developer/atlas-data-api-remix">
-              GitHub
-            </a>
+            <a href="https://github.com/ch2isk4kos/remix-test-drive">GitHub</a>
           </li>
         </ul>
       </nav>
