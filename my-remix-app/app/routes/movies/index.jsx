@@ -1,8 +1,34 @@
-import { Form, Link, useLoaderData, useSearchParams, useSubmit } from "remix";
+import {
+  Form,
+  Link,
+  useLoaderData,
+  useSearchParams,
+  useSubmit,
+} from "@remix-run/react";
 const axios = require("axios");
 
 export let loader = async ({ request }) => {
-  let pipeline = [{ $limit: 100 }];
+  //   let pipeline = [{ $limit: 100 }];
+  let url = new URL(request.url);
+  let searchTerm = url.searchParams.get("searchTerm");
+
+  const pipeline = searchTerm
+    ? [
+        {
+          $search: {
+            index: "default",
+            text: {
+              query: searchTerm,
+              path: {
+                wildcard: "*",
+              },
+            },
+          },
+        },
+        { $limit: 100 },
+        { $addFields: { meta: "$$SEARCH_META" } },
+      ]
+    : [{ $limit: 100 }];
 
   let data = JSON.stringify({
     collection: "movies",
