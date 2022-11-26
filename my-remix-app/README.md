@@ -1,6 +1,7 @@
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
+- [Mongo Atlas Tutorial](https://www.mongodb.com/developer/languages/javascript/next-gen-webapps-remix-atlas-data-api/)
 
 ## Development
 
