@@ -1,8 +1,10 @@
 import { Link } from "@remix-run/react";
+import Movies from "../routes/movies/index.jsx";
 
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      {/* NAVBAR */}
       <nav aria-label="Main navigation" className="remix-app__header-nav">
         <ul>
           <li>
@@ -25,6 +27,8 @@ export default function Index() {
           </li>
         </ul>
       </nav>
+      {/* MOVIES COMPONENT */}
+      <Movies />
     </div>
   );
 }
